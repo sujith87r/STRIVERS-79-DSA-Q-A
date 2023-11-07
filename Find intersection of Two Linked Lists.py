@@ -15,16 +15,12 @@ def insertNode(head, val):
     return head
 # utility function to check presence of intersection
 def intersectionPresent(head1, head2):
-    while head2 != None:
-        temp = head1
-        while temp != None:
-            # if both nodes are same
-            if temp == head2:
-                return head2
-            temp = temp.next
-        head2 = head2.next
-    # intersection is not present between the lists
-    return None
+    d1 = head1
+    d2 = head2
+    while d1 != d2:
+        d1 = head2 if d1 == None else d1.next
+        d2 = head1 if d2 == None else d2.next
+    return d1
 # utility function to print linked list created
 def printList(head):
     while head.next != None:
