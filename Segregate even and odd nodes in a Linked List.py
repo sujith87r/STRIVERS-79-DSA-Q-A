@@ -1,6 +1,7 @@
 # Python program to segregate even and odd nodes 
 # in a Linked List 
 # A node structure 
+
 class Node: 
 	def __init__(self, x): 
 		self.data = x 
